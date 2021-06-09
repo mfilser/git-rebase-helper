@@ -34,7 +34,7 @@ endf
 
 fun! g:InitGitRebase()
   let g:vim_rebase_helper = 1
-  nmap <silent><buffer> P :cal RebaseAction('pick')<CR>
+  nmap <silent><buffer> p :cal RebaseAction('pick')<CR>
   nmap <silent><buffer> r :cal RebaseAction('reword')<CR>
   nmap <silent><buffer> e :cal RebaseAction('edit')<CR>
   nmap <silent><buffer> s :cal RebaseAction('squash')<CR>
@@ -48,7 +48,7 @@ endf
 fun! g:FiniGitRebase()
   if g:vim_rebase_helper
     let g:vim_rebase_helper = 0
-    unmap <silent><buffer> P
+    unmap <silent><buffer> p
     unmap <silent><buffer> r
     unmap <silent><buffer> e
     unmap <silent><buffer> s
