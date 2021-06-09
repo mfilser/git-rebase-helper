@@ -8,6 +8,7 @@
 "   s   - squash
 "   r   - reword
 "   D   - delete
+"   e   - exec
 "
 "       Cornelius <cornelius.howl@gmail.com>
 
@@ -39,6 +40,7 @@ fun! g:InitGitRebase()
   nmap <silent><buffer> e :cal RebaseAction('edit')<CR>
   nmap <silent><buffer> s :cal RebaseAction('squash')<CR>
   nmap <silent><buffer> f :cal RebaseAction('fixup')<CR>
+  nmap <silent><buffer> x :cal RebaseAction('exec')<CR>
   nmap <silent><buffer> b :cal RebaseAction('break')<CR>
   nmap <silent><buffer> D :cal RebaseAction('drop')<CR>
   nmap <silent><buffer> L :cal RebaseLog()<CR>
@@ -53,6 +55,7 @@ fun! g:FiniGitRebase()
     unmap <silent><buffer> e
     unmap <silent><buffer> s
     unmap <silent><buffer> f
+    unmap <silent><buffer> x
     unmap <silent><buffer> b
     unmap <silent><buffer> D
     unmap <silent><buffer> L
