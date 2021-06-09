@@ -10,6 +10,7 @@
 "   D   - delete
 "   e   - exec
 "   l   - label
+"   t   - reset
 "
 "       Cornelius <cornelius.howl@gmail.com>
 
@@ -45,6 +46,7 @@ fun! g:InitGitRebase()
   nmap <silent><buffer> b :cal RebaseAction('break')<CR>
   nmap <silent><buffer> D :cal RebaseAction('drop')<CR>
   nmap <silent><buffer> l :cal RebaseAction('label')<CR>
+  nmap <silent><buffer> t :cal RebaseAction('reset')<CR>
   nmap <silent><buffer> L :cal RebaseLog()<CR>
   nmap <silent><buffer> <Esc> :call FiniGitRebase()<CR>
 endf
@@ -61,6 +63,7 @@ fun! g:FiniGitRebase()
     unmap <silent><buffer> b
     unmap <silent><buffer> D
     unmap <silent><buffer> l
+    unmap <silent><buffer> t
     unmap <silent><buffer> L
   endif
 endf
